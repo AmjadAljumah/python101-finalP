@@ -1,0 +1,24 @@
+#dictionary
+my_dict = {'Amal' :1111,
+           'mohammed' :2222,
+           'Khadijah': 3333,
+           'Abdullah':4444,
+           'Rawan':5555,
+           'Faisal' :6666,
+           'Layla':7777}
+def search():
+    while True:
+        search_i =input("Enter a name or number to search, or 'q' to quit: ")
+        if search_i == 'q':
+            print("Goodbye!")
+            break
+        found = False
+        for name, number  in my_dict.items():
+            if search_i.lower() in name.lower() or search_i==str(number):
+                print(f"Name:{name}, Number {number}")
+                found = True
+                break
+                if not found:
+                    print("Not found")
+
+search()
